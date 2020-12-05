@@ -1,4 +1,86 @@
-<div class="col-md-6 offset-md-3 mt-5">
+<div class="main-bg">
+  <!-- title -->
+  <h1>Soft Core</h1>
+  <!-- //title -->
+  <div class="sub-main-w3">
+    <div class="image-style">
+
+    </div>
+    <!-- vertical tabs -->
+    <div class="vertical-tab">
+      <div id="section1" class="section-w3ls">
+        <input type="radio" name="sections" id="option1" checked>
+        <label for="option1" class="icon-left-w3pvt"><span class="fa fa-user-circle" aria-hidden="true"></span>Login</label>
+        <article>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h3 class="legend">Login Here</h3>
+            <div class="input">
+              <span class="fa fa-user-o" aria-hidden="true"></span>
+              <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder="Username" name="name" required />
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is required</div>
+              </div>
+            </div>
+            <div class="input">
+              <span class="fa fa-key" aria-hidden="true"></span>
+              <input type="password" placeholder="Password" name="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+              </div>
+            </div>
+            <button [disabled]="loading" type="submit" class="btn submit">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Login
+            </button>
+            <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+            <a href="#" class="bottom-text-w3ls">Forgot Password?</a>
+          </form>
+        </article>
+      </div>
+      <div id="section3" class="section-w3ls">
+        <input type="radio" name="sections" id="option3">
+        <label for="option3" class="icon-left-w3pvt"><span class="fa fa-lock" aria-hidden="true"></span>Forgot Password?</label>
+        <article>
+          <form action="#" method="post">
+            <h3 class="legend last">Reset Password</h3>
+            <p class="para-style">Enter your email address below and we'll send you an email with instructions.</p>
+            <p class="para-style-2">
+              <strong>Need Help?</strong> Learn more about how to <a href="#">
+                retrieve an existing
+                account.
+              </a>
+            </p>
+            <div class="input">
+              <span class="fa fa-envelope-o" aria-hidden="true"></span>
+              <input type="email" placeholder="Email" name="email" required />
+            </div>
+            <button type="submit" class="btn submit last-btn">Reset</button>
+          </form>
+        </article>
+      </div>
+    </div>
+    <!-- //vertical tabs -->
+    <div class="clear"></div>
+  </div>
+  <!-- copyright -->
+  <div class="copyright">
+    <h2>
+      &copy; 2020 SoftCore IT Ltd. All rights reserved | Design by
+      <a href="http://w3layouts.com" target="_blank">W3layouts</a>
+    </h2>
+  </div>
+  <!-- //copyright -->
+</div>
+
+
+
+
+
+
+
+
+
+<!--<div class="col-md-6 offset-md-3 mt-5">
   <div class="alert alert-info">
     <strong>Normal User</strong> - U: user P: user<br />
     <strong>Administrator</strong> - U: admin P: admin
@@ -29,4 +111,4 @@
       </form>
     </div>
   </div>
-</div>
+</div>-->
