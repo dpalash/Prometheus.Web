@@ -1,4 +1,8 @@
-<body>
+<body class="login-page">
+  <app-login></app-login>
+</body>
+
+<body *ngIf="currentUser">
   <app-nav-menu></app-nav-menu>
   <div class="container">
     <router-outlet></router-outlet>

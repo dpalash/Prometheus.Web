@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.5" />
   </ItemGroup>
 
@@ -231,6 +232,10 @@
     <None Include="ClientApp\node_modules\font-awesome\scss\_screen-reader.scss" />
     <None Include="ClientApp\node_modules\font-awesome\scss\_stacked.scss" />
     <None Include="ClientApp\node_modules\font-awesome\scss\_variables.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Prometheus.Core\Prometheus.Core.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

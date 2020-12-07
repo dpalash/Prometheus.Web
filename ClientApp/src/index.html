@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -7,10 +7,35 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link href="assets/css/bootstrap.css" rel="stylesheet" />
-  <link href="assets/css/font-awesome.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
 </head>
-<body>
-  <app-root>Loading...</app-root>
+
+<body class="theme-red">
+  <app-root>
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+      <div class="loader">
+        <div class="preloader">
+          <div class="spinner-layer pl-red">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+        <p>Please wait...</p>
+      </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+  </app-root>
 </body>
 </html>

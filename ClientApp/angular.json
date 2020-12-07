@@ -23,12 +23,23 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "src/styles.css"
+              "node_modules/adminbsb-materialdesign/plugins/bootstrap/css/bootstrap.css",
+              "node_modules/adminbsb-materialdesign/plugins/node-waves/waves.css",
+              "node_modules/adminbsb-materialdesign/plugins/animate-css/animate.css",
+              "node_modules/adminbsb-materialdesign/plugins/morrisjs/morris.css",
+              "node_modules/adminbsb-materialdesign/css/style.css",
+              "adminbsb-materialdesign/css/themes/all-themes.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/adminbsb-materialdesign/plugins/jquery/jquery.min.js",
+              "node_modules/adminbsb-materialdesign/plugins/bootstrap/js/bootstrap.js",
+              "node_modules/adminbsb-materialdesign/plugins/bootstrap-select/js/bootstrap-select.js",
+              "node_modules/adminbsb-materialdesign/plugins/jquery-slimscroll/jquery.slimscroll.js",
+              "node_modules/adminbsb-materialdesign/plugins/node-waves/waves.js",
+              "node_modules/adminbsb-materialdesign/plugins/jquery-validation/jquery.validate.js",
+              "node_modules/adminbsb-materialdesign/js/admin.js",
+              "node_modules/adminbsb-materialdesign/js/demo.js",
+              "node_modules/adminbsb-materialdesign/js/pages/examples/sign-in.js"
             ],
             "aot": true
           },
