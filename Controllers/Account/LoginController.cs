@@ -1,7 +1,6 @@
-﻿using System.Text.Json;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Framework.Constants;
 using Microsoft.AspNetCore.Mvc;
-using Prometheus.Core.Constants;
 using Prometheus.Core.DTOs;
 using Prometheus.Core.Interfaces.Services.Account;
 
@@ -14,18 +13,18 @@ namespace Prometheus.Web.Controllers.Account
     {
         private readonly ILoginService _loginService;
 
-        public LoginController()
+        public LoginController(ILoginService loginService)
         {
-            _loginService = null;// loginService;
+            _loginService = loginService;
         }
 
         [HttpPost]
         [Route(Constants.Api.Routes.Login.Authenticate)]
         public async Task<IActionResult> UploadFileAsync(AuthenticateRequestDTO dto)
         {
-            dto.Token = "asdasdasd";
-            //var sss = JsonSerializer.Deserialize<AuthenticateRequestDTO>(dto);
-            return Ok(dto);
+            var authTaskResult = await _loginService.AuthenticateUserAsync(dto);
+
+            return Ok(authTaskResult.Value);
         }
     }
 }
